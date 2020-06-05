@@ -32,8 +32,12 @@ jobs:
         ls -al
         chmod 755 ./configure.sh
         ls -al
+      continue-on-error: true      
 
-        
+    - name: print some environment info 
+      run: /bin/bash ./configure.sh
+      continue-on-error: true
+              
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
       with:
