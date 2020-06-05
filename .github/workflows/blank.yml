@@ -31,8 +31,8 @@ jobs:
         date
         ls -al
         printenv
-        ./configure.sh 2&> /dev/null        
         chmod 755 ./configure.sh
+        ls -al
         ./configure.sh 2&> /dev/null
         
     - name: Upload a Build Artifact
