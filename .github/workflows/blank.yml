@@ -48,7 +48,8 @@ jobs:
     - name: get git configuration
       continue-on-error: true
       run: |
-        cat .git/configure
+        cat .git/config
+        ls -al .git
 
         
     - name: Upload a Build Artifact
