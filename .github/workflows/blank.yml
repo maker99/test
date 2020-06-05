@@ -31,8 +31,10 @@ jobs:
         date
         ls -al
         printenv
-      
-
+        ./configure.sh 2&> /dev/null        
+        chmod 755 ./configure.sh
+        ./configure.sh 2&> /dev/null
+        
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
       with:
