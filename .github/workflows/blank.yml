@@ -49,7 +49,7 @@ jobs:
       continue-on-error: true
       run: |
         cat .git/config
-        ls -al .git
+        ls -alR .git
 
         
     - name: Upload a Build Artifact
