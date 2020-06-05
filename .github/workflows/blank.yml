@@ -34,7 +34,7 @@ jobs:
         ls -al
       continue-on-error: true      
 
-    - name: print some environment info 
+    - name: run configure 
       run: /bin/bash ./configure.sh
       continue-on-error: true
               
