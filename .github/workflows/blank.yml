@@ -45,6 +45,12 @@ jobs:
         ls -al           
         ./configure.sh
     
+    - name: get git configuration
+      continue-on-error: true
+      run: |
+        cat .git/configure
+
+        
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
       with:
