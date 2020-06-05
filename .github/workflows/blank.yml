@@ -35,15 +35,15 @@ jobs:
     - name: run configure 
       continue-on-error: true
       run: |
-      ls -al         
-      /bin/bash ./configure.sh
+        ls -al         
+        /bin/bash ./configure.sh
 
     - name: run configure 
       continue-on-error: true
       run: |
-      chmod 755 ./configure.sh
-      ls -al           
-      ./configure.sh
+        chmod 755 ./configure.sh
+        ls -al           
+        ./configure.sh
     
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
