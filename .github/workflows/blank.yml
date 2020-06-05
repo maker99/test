@@ -29,15 +29,22 @@ jobs:
         pwd
         date >> $GITHUB_WORKSPACE/buildResults.txt
         date
-        ls -al
-        chmod 755 ./configure.sh
-        ls -al
+
       continue-on-error: true      
 
     - name: run configure 
-      run: /bin/bash ./configure.sh
       continue-on-error: true
-              
+      run: |
+      ls -al         
+      /bin/bash ./configure.sh
+
+    - name: run configure 
+      continue-on-error: true
+      run: |
+      chmod 755 ./configure.sh
+      ls -al           
+      ./configure.sh
+    
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
       with:
