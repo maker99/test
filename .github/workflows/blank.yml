@@ -30,10 +30,9 @@ jobs:
         date >> $GITHUB_WORKSPACE/buildResults.txt
         date
         ls -al
-        printenv
         chmod 755 ./configure.sh
         ls -al
-        ./configure.sh 2&> /dev/null
+
         
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
